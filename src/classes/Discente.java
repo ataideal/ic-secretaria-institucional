@@ -12,10 +12,6 @@ public class Discente {
 	private Periodo periodoIngresso;
 
 	private String cpf;
-
-	private boolean emProjeto;
-
-	private String tipoEmProjeto;
         
         public Discente(){
             this.curso = new Curso();
@@ -68,30 +64,10 @@ public class Discente {
         public void setCpf(String cpf) {
             this.cpf = cpf;
         }
-
-        public boolean isEmProjeto() {
-            return emProjeto;
-        }
-
-        public void setEmProjeto(boolean emProjeto) {
-            this.emProjeto = emProjeto;
-        }
-
-        public String getTipoEmProjeto() {
-            return tipoEmProjeto;
-        }
-
-        public void setTipoEmProjeto(String tipoEmProjeto) {
-            this.tipoEmProjeto = tipoEmProjeto;
-        }
         
         @Override
         public String toString(){
-            if(this.id != 0){
-                return this.id + " - " + this.nome;
-            }else{
-                return this.nome;
-            }
+            return this.nome;
         }
 
 }
