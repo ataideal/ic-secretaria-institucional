@@ -8,7 +8,7 @@ import classes.Periodo;
 
 
 public class DiscenteController {
-	ArrayList<Discente> discentes;
+	public ArrayList<Discente> discentes;
 	
 	public DiscenteController(){
 		discentes = new ArrayList<>();
@@ -36,4 +36,5 @@ public class DiscenteController {
 		}
 		System.out.println("\n");
 	}
+	
 }

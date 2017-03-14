@@ -3,8 +3,10 @@ package principal;
 import java.util.Scanner;
 
 import classes.Curso;
+import classes.Discente;
 import classes.Periodo;
 import controllers.DiscenteController;
+import controllers.GenericController;
 
 public class Menus {
 	private Scanner scan;
@@ -65,6 +67,20 @@ public class Menus {
 		}catch (Exception e) {
 			System.out.println ("Operacao invalida!");
 			return false;
+		}
+
+	}
+	
+	public void removerAluno(){
+		System.out.println("\tRemover aluno");
+		System.out.println("Selecione um aluno:");
+		Discente d = GenericController.selecionar(discenteController.discentes);
+		try{
+			discenteController.discentes.remove(d);
+			System.out.println("Aluno removido!");
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Erro ao remover aluno!");
 		}
 	}
 	

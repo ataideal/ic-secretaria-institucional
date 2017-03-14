@@ -12,7 +12,10 @@ public class Principal {
 					int c2 = menus.menuAlunos();
 					if(c2==1){
 						menus.cadastrarAluno();
-					}else if(c2==4){
+					}else if(c2==3){
+						menus.removerAluno();
+					}
+					else if(c2==4){
 						menus.listarAlunos();
 					}else
 						break;
