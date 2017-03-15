@@ -3,7 +3,7 @@ package controllers;
 import java.util.List;
 import java.util.Scanner;
 
-public class GenericController<T> {
+public class GenericController {
 	
 	private static Scanner scan;
 
@@ -17,6 +17,7 @@ public class GenericController<T> {
 		try{
 			return lista.get(a);
 		}catch (Exception e) {
+			System.out.println("Erro ao selecionar!");
 			return null;
 		}
 	}

@@ -12,6 +12,8 @@ public class Principal {
 					int c2 = menus.menuAlunos();
 					if(c2==1){
 						menus.cadastrarAluno();
+					}else if(c2==2){
+						menus.atualizarAluno();
 					}else if(c2==3){
 						menus.removerAluno();
 					}
