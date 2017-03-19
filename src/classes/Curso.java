@@ -7,6 +7,13 @@ public class Curso {
 
 	private String nome;
 
+
+        /*public Curso(Integer id, String codigo, String nome) {
+            this.id = id;
+            this.codigo = codigo;
+            this.nome = nome;
+        }*/
+        
         public Integer getId() {
             return id;
         }
@@ -33,7 +40,7 @@ public class Curso {
 
         public String toString(){
             if(this.id != 0)
-                return this.id + "-" + this.nome;
+                return getNome()+"\n";
             else
                 return this.nome;
         }

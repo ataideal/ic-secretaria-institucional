@@ -1,12 +1,17 @@
 package principal;
 
+import java.util.Scanner;
+
 public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Menus menus = new Menus();
-		while(true){
+                Scanner scan = new Scanner(System.in);
+		
+                while(true){
 			int c1 = menus.menuPrincipal();
+                        
 			if(c1==1){
 				while(true){
 					int c2 = menus.menuAlunos();

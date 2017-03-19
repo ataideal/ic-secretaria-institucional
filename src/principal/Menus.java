@@ -5,16 +5,19 @@ import java.util.Scanner;
 import classes.Curso;
 import classes.Discente;
 import classes.Periodo;
+import controllers.CursoController;
 import controllers.DiscenteController;
 import controllers.GenericController;
 
 public class Menus {
 	private Scanner scan;
 	public DiscenteController discenteController;
-
+        public CursoController cursoController;
+        
 	public Menus(){
 		discenteController = new DiscenteController();
-	}
+                cursoController = new CursoController();
+        }
 	public int menuPrincipal(){
 
 		System.out.println("\tSecretaria IC");
@@ -139,6 +142,54 @@ public class Menus {
 			return 0;
 		return a;
 	}
+        
+        public void cadastrarCurso(){
+		try{
+			scan = new Scanner(System.in);
+			System.out.println("\tCadastro de curso");
+			System.out.println("Digite o nome:");
+			String nome = scan.nextLine();
+			System.out.println("Digite o codigo:");
+			String codigo = scan.nextLine();
+			System.out.println("Digite o id:");
+			int id = scan.nextInt();
+			
+                        Curso curso = new Curso();
+                        curso.setCodigo(codigo);
+                        curso.setNome(nome);
+                        curso.setId(id);
+                        
+			cursoController.cadastrar(curso);
+		}catch (Exception e) {
+			System.out.println ("Operacao invalida!");
+		}
+
+	}
+        
+        public void removerCurso(){
+		System.out.println("\tRemover curso");
+		System.out.println("Selecione um aluno:");
+		Curso c = GenericController.selecionar(cursoController.cursos);
+		if(c!=null)
+			cursoController.remover(c);
+	}
+        
+        public void atualizarCurso(){
+		System.out.println("\tAtualizar curso");
+		System.out.println("Selecione um curso:");
+		Curso c = GenericController.selecionar(cursoController.cursos);
+		if(c!=null){
+			try{
+
+			}catch (Exception e) {
+			}
+		}
+
+	}
+        
+        public void listarCursos(){
+                cursoController.listar();
+        }
 	/*--------------------------------------------------------*/
 
 	/*-------------------------Periodo------------------------*/
