@@ -20,6 +20,7 @@ public class Menus {
 	public Menus(){
 		discenteController = new DiscenteController();
 		cursoController = new CursoController();
+		periodoController = new PeriodoController();
 	}
 	public int menuPrincipal(){
 
@@ -45,7 +46,7 @@ public class Menus {
 		System.out.println("2-Atualizar");
 		System.out.println("3-Remover");
 		System.out.println("4-Listar");
-		System.out.println("5-Listar por curso");
+		System.out.println("5-Listar no semestre atual");
 		System.out.println("6-Listar por turma");
 		System.out.println("7-Listar por disciplina");
 		System.out.println("8-");
@@ -73,9 +74,10 @@ public class Menus {
 			System.out.println("Selecione o periodo de ingresso:");
 			Periodo periodo = GenericController.selecionar(periodoController.periodos);
 			periodo.setAtual(periodoController.getAtual(periodo));
-
+			
 
 			Discente aluno = new Discente(discenteController.getIdIncrementor());
+			aluno.disciplinas = cursoController.disciplinasPorPeriodoECurso(periodo.getAtual(),curso);
 			aluno.setNome(nome);
 			aluno.setMatricula(matricula);
 			aluno.setCurso(curso);

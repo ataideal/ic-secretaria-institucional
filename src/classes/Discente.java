@@ -1,4 +1,7 @@
 package classes;
+
+import java.util.ArrayList;
+
 public class Discente {
 
 	private final Integer id;
@@ -12,63 +15,66 @@ public class Discente {
 	private Periodo periodoIngresso;
 
 	private String cpf;
-        
-        public Discente(int id){
-        	this.id = id;
-            this.curso = new Curso();
-            this.periodoIngresso = new Periodo();
-        }
-        public Integer getId() {
-            return id;
-        }
 
-        public String getNome() {
-            return nome;
-        }
+	public ArrayList<Disciplinas> disciplinas;
 
-        public void setNome(String nome) {
-            this.nome = nome;
-        }
+	public Discente(int id){
+		this.id = id;
+		this.curso = new Curso();
+		this.periodoIngresso = new Periodo();
+		this.disciplinas = new ArrayList<>();
+	}
+	public Integer getId() {
+		return id;
+	}
 
-        public String getMatricula() {
-            return matricula;
-        }
+	public String getNome() {
+		return nome;
+	}
 
-        public void setMatricula(String matricula) {
-            this.matricula = matricula;
-        }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-        public Curso getCurso() {
-            return curso;
-        }
+	public String getMatricula() {
+		return matricula;
+	}
 
-        public void setCurso(Curso curso) {
-            this.curso = curso;
-        }
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
 
-        public Periodo getPeriodoIngresso() {
-            return periodoIngresso;
-        }
+	public Curso getCurso() {
+		return curso;
+	}
 
-        public void setPeriodoIngresso(Periodo periodoIngresso) {
-            this.periodoIngresso = periodoIngresso;
-        }
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
 
-        public String getCpf() {
-            return cpf;
-        }
+	public Periodo getPeriodoIngresso() {
+		return periodoIngresso;
+	}
 
-        public void setCpf(String cpf) {
-            this.cpf = cpf;
-        }
-        
-        @Override
-        public String toString(){
-            return this.nome;
-        }
-        public String toStringNomePeriodo(){
-            return this.nome+" "+this.periodoIngresso.getAtual()+"º periodo";
-        }
-        
+	public void setPeriodoIngresso(Periodo periodoIngresso) {
+		this.periodoIngresso = periodoIngresso;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	@Override
+	public String toString(){
+		return this.nome;
+	}
+	public String toStringNomePeriodo(){
+		return this.nome+" "+this.periodoIngresso.getAtual()+"ï¿½ periodo";
+	}
+
 
 }

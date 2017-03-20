@@ -61,7 +61,7 @@ public class DiscenteController implements Controller {
 	}
 	
 	public void listarPorPeriodo(Periodo periodo) {
-		System.out.println("\tLista de Alunos "+periodo.getNome());
+		System.out.println("\tLista de Alunos do semestre");
 		for (Discente d:discentes){
 			System.out.println(d.toStringNomePeriodo());
 		}
@@ -69,7 +69,7 @@ public class DiscenteController implements Controller {
 	}
 	
 	public void listarPorTurma(Periodo periodo) {
-		System.out.println("\tLista de Alunos "+periodo.getAtual());
+		System.out.println("\tLista de Alunos no "+periodo.getAtual()+"° periodo");
 		for (Discente d:discentes){
 			if(periodo.getAtual()==d.getPeriodoIngresso().getAtual())
 				System.out.println(d.toString());
@@ -78,7 +78,7 @@ public class DiscenteController implements Controller {
 	}
 	
 	public void listarAlunosPorDisciplina(Disciplinas disciplina) {
-		System.out.println("\tLista de Alunos "+disciplina.getNome());
+		System.out.println("\tLista de Alunos na disciplina "+disciplina.getNome());
 		for (Discente d:discentes){
 			if(d.getCurso().getDisciplinas().contains(disciplina))
 				System.out.println(d.toString());

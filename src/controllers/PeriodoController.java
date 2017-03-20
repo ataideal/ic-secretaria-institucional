@@ -14,6 +14,7 @@ public class PeriodoController {
 
 	public int getAtual(Periodo periodo) {
 		for(int i=0;i<periodos.size();i++){
+			System.out.println(periodos.get(i).toString());
 			if(periodo.getNome().equals(periodos.get(i).getNome()))
 				return periodos.size()-i;
 		}
@@ -24,12 +25,16 @@ public class PeriodoController {
 		Periodo p = new Periodo();
 		p.setNome("2015.1");
 		periodos.add(p);
+		p = new Periodo();
 		p.setNome("2015.2");
 		periodos.add(p);
+		p = new Periodo();
 		p.setNome("2016.1");
 		periodos.add(p);
+		p = new Periodo();
 		p.setNome("2016.2");
 		periodos.add(p);
+		p = new Periodo();
 		p.setNome("2017.1");
 		periodos.add(p);
 	}
