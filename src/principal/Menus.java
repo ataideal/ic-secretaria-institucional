@@ -15,7 +15,7 @@ public class Menus {
 	public DiscenteController discenteController;
 	public CursoController cursoController;
 	public PeriodoController periodoController;
-	
+
 	public Menus(){
 		discenteController = new DiscenteController();
 		cursoController = new CursoController();
@@ -68,8 +68,8 @@ public class Menus {
 			System.out.println("Selecione o periodo de ingresso:");
 			Periodo periodo = GenericController.selecionar(periodoController.periodos);
 			periodo.setAtual(periodoController.getAtual(periodo));
-			
-			
+
+
 			Discente aluno = new Discente(discenteController.getIdIncrementor());
 			aluno.setNome(nome);
 			aluno.setMatricula(matricula);
@@ -108,7 +108,7 @@ public class Menus {
 	public void listarAlunos(){
 		discenteController.listar();
 	}
-	
+
 	public void listarAlunosPorPeriodo(){
 		System.out.println("\tAlunos por periodo");
 		System.out.println("Selecione o periodo:");
@@ -116,7 +116,7 @@ public class Menus {
 		if(p!=null)
 			discenteController.listarPorPeriodo(p);
 	}
-	
+
 	public void listarAlunosPorTurma(){
 		System.out.println("\tAlunos por periodo");
 		System.out.println("Selecione o periodo:");
@@ -124,7 +124,7 @@ public class Menus {
 		if(p!=null)
 			discenteController.listarPorTurma(p);
 	}
-	
+
 
 	/*--------------------------------------------------------*/
 
@@ -155,6 +155,7 @@ public class Menus {
 		System.out.println("2-Atualizar");
 		System.out.println("3-Remover");
 		System.out.println("4-Listar");
+		System.out.println("5-Mostrar matriz de disciplina");
 		System.out.println("9-Sair\n");
 
 		scan = new Scanner(System.in);
@@ -176,6 +177,7 @@ public class Menus {
 			int id = scan.nextInt();
 
 			Curso curso = new Curso();
+
 			curso.setCodigo(codigo);
 			curso.setNome(nome);
 			curso.setId(id);
@@ -210,6 +212,10 @@ public class Menus {
 
 	public void listarCursos(){
 		cursoController.listar();
+	}
+
+	public void mostrarDisciplinas(){
+
 	}
 	/*--------------------------------------------------------*/
 
