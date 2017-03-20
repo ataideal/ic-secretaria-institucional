@@ -65,15 +65,16 @@ public class CursoController implements Controller {
             scan = new Scanner(System.in);
             int cur;
             
+            try{
+                
             System.out.println("Escolha o curso : ");
             for(int i=0;i<cursos.size();i++){
-                System.out.println("Curso " + i);
+                System.out.println("Curso " + cursos.get(i).toString());
                 cursos.get(i).toString();
             }
             
             cur = scan.nextInt();
             
-            try{
                 for(int i=0;i<cursos.get(cur).getDisciplinas().size();i++){
                     cursos.get(cur).getDisciplinas().get(i).toString();
                 }

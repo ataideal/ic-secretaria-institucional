@@ -32,8 +32,19 @@ public class Principal {
 			else if(c1==2){
 				int c2 = menus.menuServidor();
 			}
-			else if(c1==3){
+			else if(c1==3){ //Curso
 				int c2 = menus.menuCurso();
+                                    if(c2==1){
+                                        menus.cadastrarCurso();
+                                    } else if (c2==2){
+                                        menus.atualizarCurso();
+                                    } else if (c2==3){
+                                        menus.removerCurso();
+                                    } else if (c2==4){
+                                        menus.listarCursos();
+                                    } else if (c2==5){
+                                        menus.mostrarDisciplinas();
+                                    }
 			}
 			else if(c1==4){
 				int c2 = menus.menuPeriodo();
