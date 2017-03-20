@@ -8,16 +8,18 @@ import classes.Periodo;
 import controllers.CursoController;
 import controllers.DiscenteController;
 import controllers.GenericController;
+import controllers.PeriodoController;
 
 public class Menus {
 	private Scanner scan;
 	public DiscenteController discenteController;
-        public CursoController cursoController;
-        
+	public CursoController cursoController;
+	public PeriodoController periodoController;
+	
 	public Menus(){
 		discenteController = new DiscenteController();
-                cursoController = new CursoController();
-        }
+		cursoController = new CursoController();
+	}
 	public int menuPrincipal(){
 
 		System.out.println("\tSecretaria IC");
@@ -62,11 +64,13 @@ public class Menus {
 			System.out.println("Digite o cpf:");
 			String cpf = scan.nextLine();
 			System.out.println("Selecione o curso:");
-			Curso curso = new Curso();// = cursoController.selecionarCurso();
+			Curso curso = new Curso(); //GenericController.selecionar(cursoController.cursos);
 			System.out.println("Selecione o periodo de ingresso:");
-			Periodo periodo = new Periodo();// = periodoController.selecionarCurso();
-
-			Discente aluno = new Discente();
+			Periodo periodo = GenericController.selecionar(periodoController.periodos);
+			periodo.setAtual(periodoController.getAtual(periodo));
+			
+			
+			Discente aluno = new Discente(discenteController.getIdIncrementor());
 			aluno.setNome(nome);
 			aluno.setMatricula(matricula);
 			aluno.setCurso(curso);
@@ -104,6 +108,23 @@ public class Menus {
 	public void listarAlunos(){
 		discenteController.listar();
 	}
+	
+	public void listarAlunosPorPeriodo(){
+		System.out.println("\tAlunos por periodo");
+		System.out.println("Selecione o periodo:");
+		Periodo p = GenericController.selecionar(periodoController.periodos);
+		if(p!=null)
+			discenteController.listarPorPeriodo(p);
+	}
+	
+	public void listarAlunosPorTurma(){
+		System.out.println("\tAlunos por periodo");
+		System.out.println("Selecione o periodo:");
+		Periodo p = GenericController.selecionar(periodoController.periodos);
+		if(p!=null)
+			discenteController.listarPorTurma(p);
+	}
+	
 
 	/*--------------------------------------------------------*/
 
@@ -142,8 +163,8 @@ public class Menus {
 			return 0;
 		return a;
 	}
-        
-        public void cadastrarCurso(){
+
+	public void cadastrarCurso(){
 		try{
 			scan = new Scanner(System.in);
 			System.out.println("\tCadastro de curso");
@@ -153,28 +174,28 @@ public class Menus {
 			String codigo = scan.nextLine();
 			System.out.println("Digite o id:");
 			int id = scan.nextInt();
-			
-                        Curso curso = new Curso();
-                        curso.setCodigo(codigo);
-                        curso.setNome(nome);
-                        curso.setId(id);
-                        
+
+			Curso curso = new Curso();
+			curso.setCodigo(codigo);
+			curso.setNome(nome);
+			curso.setId(id);
+
 			cursoController.cadastrar(curso);
 		}catch (Exception e) {
 			System.out.println ("Operacao invalida!");
 		}
 
 	}
-        
-        public void removerCurso(){
+
+	public void removerCurso(){
 		System.out.println("\tRemover curso");
 		System.out.println("Selecione um aluno:");
 		Curso c = GenericController.selecionar(cursoController.cursos);
 		if(c!=null)
 			cursoController.remover(c);
 	}
-        
-        public void atualizarCurso(){
+
+	public void atualizarCurso(){
 		System.out.println("\tAtualizar curso");
 		System.out.println("Selecione um curso:");
 		Curso c = GenericController.selecionar(cursoController.cursos);
@@ -186,10 +207,10 @@ public class Menus {
 		}
 
 	}
-        
-        public void listarCursos(){
-                cursoController.listar();
-        }
+
+	public void listarCursos(){
+		cursoController.listar();
+	}
 	/*--------------------------------------------------------*/
 
 	/*-------------------------Periodo------------------------*/
