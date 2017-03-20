@@ -49,7 +49,7 @@ public class Menus {
 		System.out.println("5-Listar no semestre atual");
 		System.out.println("6-Listar por turma");
 		System.out.println("7-Listar por disciplina");
-		System.out.println("8-");
+		System.out.println("8-Solicitar trancamento de disciplina");
 		System.out.println("9-Sair\n");
 
 		scan = new Scanner(System.in);
@@ -143,6 +143,25 @@ public class Menus {
 				discenteController.listarAlunosPorDisciplina(d);
 		}
 		
+		
+	}
+	
+	public void trancamentoDeDisciplina() {
+		System.out.println("\tTrancamento de disciplina");
+		System.out.println("Selecione o aluno:");
+		Discente d = GenericController.selecionar(discenteController.discentes);
+		if(d!=null){
+			Disciplinas disc = GenericController.selecionar(d.disciplinas);
+			if (disc!=null){
+				try{
+					int i = discenteController.discentes.lastIndexOf(d);
+					discenteController.discentes.get(i).disciplinas.remove(disc);
+					System.out.println("Trancamento efetuado!");
+				}catch (Exception e) {
+					System.out.println("Erro na operacao!");
+				}
+			}
+		}
 		
 	}
 
@@ -256,4 +275,5 @@ public class Menus {
 		return a;
 	}
 	/*------------------------------------------------------*/
+	
 }

@@ -80,7 +80,7 @@ public class DiscenteController implements Controller {
 	public void listarAlunosPorDisciplina(Disciplinas disciplina) {
 		System.out.println("\tLista de Alunos na disciplina "+disciplina.getNome());
 		for (Discente d:discentes){
-			if(d.getCurso().getDisciplinas().contains(disciplina))
+			if(d.disciplinas.contains(disciplina))
 				System.out.println(d.toString());
 		}
 		System.out.println("\n");

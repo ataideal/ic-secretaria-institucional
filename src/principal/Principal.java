@@ -31,7 +31,7 @@ public class Principal {
 					}else if(c2==7){
 						menus.listarAlunosPorDisciplina();
 					}else if(c2==8){
-					
+						menus.trancamentoDeDisciplina();
 					}else
 						break;
 				}
