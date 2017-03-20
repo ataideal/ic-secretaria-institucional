@@ -134,6 +134,7 @@ public class Menus {
 		System.out.println("2-Atualizar");
 		System.out.println("3-Remover");
 		System.out.println("4-Listar");
+                System.out.println("5-Mostrar matriz de disciplina");
 		System.out.println("9-Sair\n");
 
 		scan = new Scanner(System.in);
@@ -155,6 +156,7 @@ public class Menus {
 			int id = scan.nextInt();
 			
                         Curso curso = new Curso();
+                        
                         curso.setCodigo(codigo);
                         curso.setNome(nome);
                         curso.setId(id);
@@ -189,6 +191,10 @@ public class Menus {
         
         public void listarCursos(){
                 cursoController.listar();
+        }
+        
+        public void mostrarDisciplinas(){
+                
         }
 	/*--------------------------------------------------------*/
 

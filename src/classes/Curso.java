@@ -1,4 +1,7 @@
 package classes;
+
+import java.util.ArrayList;
+
 public class Curso {
 
 	private Integer id;
@@ -6,13 +9,12 @@ public class Curso {
 	private String codigo;
 
 	private String nome;
+        
+        public ArrayList<Disciplinas> disciplinas;
 
-
-        /*public Curso(Integer id, String codigo, String nome) {
-            this.id = id;
-            this.codigo = codigo;
-            this.nome = nome;
-        }*/
+        public Curso() {
+            disciplinas = new ArrayList();
+        }
         
         public Integer getId() {
             return id;
@@ -36,6 +38,14 @@ public class Curso {
 
         public void setNome(String nome) {
             this.nome = nome;
+        }
+
+        public ArrayList<Disciplinas> getDisciplinas() {
+            return disciplinas;
+        }
+
+        public void setDisciplinas(ArrayList<Disciplinas> disciplinas) {
+            this.disciplinas = disciplinas;
         }
 
         public String toString(){

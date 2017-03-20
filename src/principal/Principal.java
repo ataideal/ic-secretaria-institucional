@@ -7,6 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Menus menus = new Menus();
+                menus.cursoController.gerarExemplos();
                 Scanner scan = new Scanner(System.in);
 		
                 while(true){
