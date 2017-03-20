@@ -1,7 +1,7 @@
 package classes;
 public class Discente {
 
-	private Integer id;
+	private final Integer id;
 
 	private String nome;
 
@@ -13,16 +13,13 @@ public class Discente {
 
 	private String cpf;
         
-        public Discente(){
+        public Discente(int id){
+        	this.id = id;
             this.curso = new Curso();
             this.periodoIngresso = new Periodo();
         }
         public Integer getId() {
             return id;
-        }
-
-        public void setId(Integer id) {
-            this.id = id;
         }
 
         public String getNome() {
@@ -69,5 +66,9 @@ public class Discente {
         public String toString(){
             return this.nome;
         }
+        public String toStringNomePeriodo(){
+            return this.nome+" "+this.periodoIngresso.getAtual()+"º periodo";
+        }
+        
 
 }

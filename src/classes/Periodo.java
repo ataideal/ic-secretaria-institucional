@@ -4,6 +4,7 @@ public class Periodo {
     
     private int id;
     private String nome;
+    private int atual;
 
     public int getId() {
         return id;
@@ -24,4 +25,12 @@ public class Periodo {
     public String toString(){
         return nome;
     }
+
+	public int getAtual() {
+		return atual;
+	}
+
+	public void setAtual(int atual) {
+		this.atual = atual;
+	}
 }
