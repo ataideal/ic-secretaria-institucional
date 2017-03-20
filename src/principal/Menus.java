@@ -166,7 +166,7 @@ public class Menus {
 
 		scan = new Scanner(System.in);
 		int a = scan.nextInt();
-		if((a<1 && a>5) && a!=9)
+		if((a<1 && a>6) && a!=9)
 			return 0;
 		return a;
 	}
@@ -221,7 +221,7 @@ public class Menus {
 	}
 
 	public void mostrarDisciplinas(){
-
+                cursoController.mostrarDisciplinas();
 	}
 	/*--------------------------------------------------------*/
 
