@@ -22,9 +22,16 @@ public class Principal {
 						menus.atualizarAluno();
 					}else if(c2==3){
 						menus.removerAluno();
-					}
-					else if(c2==4){
+					}else if(c2==4){
 						menus.listarAlunos();
+					}else if(c2==5){
+						menus.listarAlunosPorPeriodo();
+					}else if(c2==6){
+						menus.listarAlunosPorTurma();
+					}else if(c2==7){
+						menus.listarAlunosPorDisciplina();
+					}else if(c2==8){
+					
 					}else
 						break;
 				}

@@ -45,11 +45,15 @@ public class Menus {
 		System.out.println("2-Atualizar");
 		System.out.println("3-Remover");
 		System.out.println("4-Listar");
+		System.out.println("5-Listar por curso");
+		System.out.println("6-Listar por turma");
+		System.out.println("7-Listar por disciplina");
+		System.out.println("8-");
 		System.out.println("9-Sair\n");
 
 		scan = new Scanner(System.in);
 		int a = scan.nextInt();
-		if((a<1 && a>4) && a!=9)
+		if((a<1 && a>8) && a!=9)
 			return 0;
 		return a;
 	}
@@ -65,7 +69,7 @@ public class Menus {
 			System.out.println("Digite o cpf:");
 			String cpf = scan.nextLine();
 			System.out.println("Selecione o curso:");
-			Curso curso = new Curso(); //GenericController.selecionar(cursoController.cursos);
+			Curso curso = GenericController.selecionar(cursoController.cursos);
 			System.out.println("Selecione o periodo de ingresso:");
 			Periodo periodo = GenericController.selecionar(periodoController.periodos);
 			periodo.setAtual(periodoController.getAtual(periodo));
@@ -128,7 +132,15 @@ public class Menus {
 
 	
 	public void listarAlunosPorDisciplina() {
-		System.out.println("\tAlunos por materia");
+		System.out.println("\tAlunos por disciplina");
+		System.out.println("Selecione o curso:");
+		Curso c = GenericController.selecionar(cursoController.cursos);
+		if(c!=null){
+			Disciplinas d = GenericController.selecionar(c.disciplinas);
+			if(d!=null)
+				discenteController.listarAlunosPorDisciplina(d);
+		}
+		
 		
 	}
 
@@ -221,7 +233,7 @@ public class Menus {
 	}
 
 	public void mostrarDisciplinas(){
-
+		
 	}
 	/*--------------------------------------------------------*/
 
