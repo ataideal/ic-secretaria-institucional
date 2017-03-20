@@ -9,50 +9,50 @@ public class Curso {
 	private String codigo;
 
 	private String nome;
-        
-        public ArrayList<Disciplinas> disciplinas;
 
-        public Curso() {
-            disciplinas = new ArrayList();
-        }
-        
-        public Integer getId() {
-            return id;
-        }
+	public ArrayList<Disciplinas> disciplinas;
 
-        public void setId(Integer id) {
-            this.id = id;
-        }
+	public Curso() {
+		disciplinas = new ArrayList();
+	}
 
-        public String getCodigo() {
-            return codigo;
-        }
+	public Integer getId() {
+		return id;
+	}
 
-        public void setCodigo(String codigo) {
-            this.codigo = codigo;
-        }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-        public String getNome() {
-            return nome;
-        }
+	public String getCodigo() {
+		return codigo;
+	}
 
-        public void setNome(String nome) {
-            this.nome = nome;
-        }
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
 
-        public ArrayList<Disciplinas> getDisciplinas() {
-            return disciplinas;
-        }
+	public String getNome() {
+		return nome;
+	}
 
-        public void setDisciplinas(ArrayList<Disciplinas> disciplinas) {
-            this.disciplinas = disciplinas;
-        }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-        public String toString(){
-            if(this.id != 0)
-                return getNome()+"\n";
-            else
-                return this.nome;
-        }
+	public ArrayList<Disciplinas> getDisciplinas() {
+		return disciplinas;
+	}
+
+	public void setDisciplinas(ArrayList<Disciplinas> disciplinas) {
+		this.disciplinas = disciplinas;
+	}
+
+	public String toString(){
+		if(this.id != 0)
+			return getNome()+"\n";
+		else
+			return this.nome;
+	}
 
 }
