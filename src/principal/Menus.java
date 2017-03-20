@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import classes.Curso;
 import classes.Discente;
+import classes.Disciplinas;
 import classes.Periodo;
 import controllers.CursoController;
 import controllers.DiscenteController;
@@ -118,13 +119,18 @@ public class Menus {
 	}
 
 	public void listarAlunosPorTurma(){
-		System.out.println("\tAlunos por periodo");
+		System.out.println("\tAlunos por turma");
 		System.out.println("Selecione o periodo:");
 		Periodo p = GenericController.selecionar(periodoController.periodos);
 		if(p!=null)
 			discenteController.listarPorTurma(p);
 	}
 
+	
+	public void listarAlunosPorDisciplina() {
+		System.out.println("\tAlunos por materia");
+		
+	}
 
 	/*--------------------------------------------------------*/
 

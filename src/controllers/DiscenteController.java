@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import classes.Curso;
 import classes.Discente;
+import classes.Disciplinas;
 import classes.Periodo;
 
 
@@ -71,6 +72,15 @@ public class DiscenteController implements Controller {
 		System.out.println("\tLista de Alunos "+periodo.getAtual());
 		for (Discente d:discentes){
 			if(periodo.getAtual()==d.getPeriodoIngresso().getAtual())
+				System.out.println(d.toString());
+		}
+		System.out.println("\n");
+	}
+	
+	public void listarAlunosPorDisciplina(Disciplinas disciplina) {
+		System.out.println("\tLista de Alunos "+disciplina.getNome());
+		for (Discente d:discentes){
+			if(d.getCurso().getDisciplinas().contains(disciplina))
 				System.out.println(d.toString());
 		}
 		System.out.println("\n");

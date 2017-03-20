@@ -5,13 +5,16 @@ public class Disciplinas {
     private String nome;
     private String codigo;
     private String horas;
-    private String periodo;
-
-    public String getPeriodo() {
+    private Periodo periodo;
+    
+    public Disciplinas(){
+    	periodo = new Periodo();
+    }
+    public Periodo getPeriodo() {
         return periodo;
     }
 
-    public void setPeriodo(String periodo) {
+    public void setPeriodo(Periodo periodo) {
         this.periodo = periodo;
     }
 

@@ -88,178 +88,178 @@ public class CursoController implements Controller {
 		dis.setNome("Inglês Instrumental");
 		dis.setCodigo("Comp200");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("1");
+		dis.getPeriodo().setAtual(1);
 		disciplinas.add(dis);
 
 		dis.setNome("Programação 1");
 		dis.setCodigo("Comp201");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("1");
+		dis.getPeriodo().setAtual(1);
 		disciplinas.add(dis);
 
 		dis.setNome("Laboratório de Programação");
 		dis.setCodigo("Comp202");
 		dis.setHoras("30 hs");
-		dis.setPeriodo("1");
+		dis.getPeriodo().setAtual(1);
 		disciplinas.add(dis);
 
 		dis.setNome("Fundamentos da Matemática");
 		dis.setCodigo("Comp203");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("1");
+		dis.getPeriodo().setAtual(1);
 		disciplinas.add(dis);
 
 		dis.setNome("Geometria Analitica");
 		dis.setCodigo("Comp204");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("1");
+		dis.getPeriodo().setAtual(1);
 		disciplinas.add(dis);
 
 		dis.setNome("Introdução à Computação");
 		dis.setCodigo("Comp205");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("1");
+		dis.getPeriodo().setAtual(1);
 		disciplinas.add(dis);
 
 		dis.setNome("Internet e Web");
 		dis.setCodigo("Comp206");
 		dis.setHoras("30 hs");
-		dis.setPeriodo("1");
+		dis.getPeriodo().setAtual(1);
 		disciplinas.add(dis);
 
 		//SEGUNDO PERIODO
 		dis.setNome("Linguagens Formais e Autômatos");
 		dis.setCodigo("Comp207");
 		dis.setHoras("40 hs");
-		dis.setPeriodo("2");
+		dis.getPeriodo().setAtual(2);
 		disciplinas.add(dis);
 
 		dis.setNome("Estrutura de Dados");
 		dis.setCodigo("Comp208");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("2");
+		dis.getPeriodo().setAtual(2);
 		disciplinas.add(dis);
 
 		dis.setNome("Matemática Discreta");
 		dis.setCodigo("Comp209");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("2");
+		dis.getPeriodo().setAtual(2);
 		disciplinas.add(dis);
 
 		dis.setNome("Cálculo 1");
 		dis.setCodigo("Comp210");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("2");
+		dis.getPeriodo().setAtual(2);
 		disciplinas.add(dis);
 
 		dis.setNome("Álgebra Linear");
 		dis.setCodigo("Comp211");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("2");
+		dis.getPeriodo().setAtual(2);
 		disciplinas.add(dis);
 
 		dis.setNome("Metodologia da Pesquisa e do Trabalho Científico");
 		dis.setCodigo("Comp212");
 		dis.setHoras("30 hs");
-		dis.setPeriodo("2");
+		dis.getPeriodo().setAtual(2);
 		disciplinas.add(dis);
 
 		dis.setNome("Lógica Aplicada à Computação");
 		dis.setCodigo("Comp213");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("2");
+		dis.getPeriodo().setAtual(2);
 		disciplinas.add(dis);
 
 		//TERCEIRO PERIODO
 		dis.setNome("Teoria da Computação");
 		dis.setCodigo("Comp214");
 		dis.setHoras("30 hs");
-		dis.setPeriodo("3");
+		dis.getPeriodo().setAtual(3);
 		disciplinas.add(dis);
 
 		dis.setNome("Projeto de Software");
 		dis.setCodigo("Comp215");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("3");
+		dis.getPeriodo().setAtual(3);
 		disciplinas.add(dis);
 
 		dis.setNome("Física 1");
 		dis.setCodigo("Comp216");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("3");
+		dis.getPeriodo().setAtual(3);
 		disciplinas.add(dis);
 
 		dis.setNome("Cálculo 2");
 		dis.setCodigo("Comp217");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("3");
+		dis.getPeriodo().setAtual(3);
 		disciplinas.add(dis);
 
 		dis.setNome("Circuitos Digitais");
 		dis.setCodigo("Comp218");
 		dis.setHoras("30 hs");
-		dis.setPeriodo("3");
+		dis.getPeriodo().setAtual(3);
 		disciplinas.add(dis);
 
 		dis.setNome("Projeto e Análise de Algorítmos");
 		dis.setCodigo("Comp219");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("3");
+		dis.getPeriodo().setAtual(3);
 		disciplinas.add(dis);
 
 		dis.setNome("Banco de Dados");
 		dis.setCodigo("Comp220");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("3");
+		dis.getPeriodo().setAtual(3);
 		disciplinas.add(dis);
 
 		//QUARTO PERIODO
 		dis.setNome("Probabilidade e Estatística");
 		dis.setCodigo("Comp221");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("4");
+		dis.getPeriodo().setAtual(4);
 		disciplinas.add(dis);
 
 		dis.setNome("Metodologia e Processos");
 		dis.setCodigo("Comp222");
 		dis.setHoras("30 hs");
-		dis.setPeriodo("4");
+		dis.getPeriodo().setAtual(4);
 		disciplinas.add(dis);
 
 		dis.setNome("Física 2");
 		dis.setCodigo("Comp223");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("4");
+		dis.getPeriodo().setAtual(4);
 		disciplinas.add(dis);
 
 		dis.setNome("Cálculo 3");
 		dis.setCodigo("Comp224");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("4");
+		dis.getPeriodo().setAtual(4);
 		disciplinas.add(dis);
 
 		dis.setNome("Organização e Arquitetura de Computadores");
 		dis.setCodigo("Comp225");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("4");
+		dis.getPeriodo().setAtual(4);
 		disciplinas.add(dis);
 
 		dis.setNome("Conceitos de Linguagens de Programação");
 		dis.setCodigo("Comp226");
 		dis.setHoras("60 hs");
-		dis.setPeriodo("4");
+		dis.getPeriodo().setAtual(4);
 		disciplinas.add(dis);
 
 		dis.setNome("Banco de Dados 2");
 		dis.setCodigo("Comp227");
 		dis.setHoras("30 hs");
-		dis.setPeriodo("4");
+		dis.getPeriodo().setAtual(4);
 		disciplinas.add(dis);
 
 		dis.setNome("Física Experimental");
 		dis.setCodigo("Comp228");
 		dis.setHoras("30 hs");
-		dis.setPeriodo("4");
+		dis.getPeriodo().setAtual(4);
 		disciplinas.add(dis);
 
 		return disciplinas;
