@@ -75,6 +75,7 @@ public class Menus {
             String cpf = scan.nextLine();
             System.out.println("Selecione o curso:");
             Curso curso = GenericController.selecionar(cursoController.cursos);
+            curso.setAlunos(curso.getAlunos()+1);
             System.out.println("Selecione o periodo de ingresso:");
             Periodo periodo = GenericController.selecionar(periodoController.periodos);
             periodo.setAtual(periodoController.getAtual(periodo));

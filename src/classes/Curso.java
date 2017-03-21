@@ -9,12 +9,23 @@ public class Curso {
 	private String codigo;
 
 	private String nome;
+        
+        private int alunos;
 
 	public ArrayList<Disciplinas> disciplinas;
 
 	public Curso() {
 		disciplinas = new ArrayList();
+                this.alunos = 0;
 	}
+        
+        public int getAlunos() {
+            return alunos;
+        }
+
+        public void setAlunos(int alunos) {
+            this.alunos = alunos;
+        }
 
 	public Integer getId() {
 		return id;

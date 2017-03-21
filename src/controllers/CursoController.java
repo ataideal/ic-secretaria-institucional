@@ -293,7 +293,203 @@ public class CursoController implements Controller {
 		return disciplinas;
 	}
 
-	public void gerarDisciplinasEC(){
+	public ArrayList<Disciplinas> gerarDisciplinasEC(){
+            ArrayList<Disciplinas> disciplinas = new ArrayList();
+		Disciplinas dis = new Disciplinas();
+
+		//PRIMEIRO PERIODO
+		dis.setNome("Inglês Instrumental");
+		dis.setCodigo("ECOM001");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(1);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Programação 1");
+		dis.setCodigo("ECOM002");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(1);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Matemática Discreta");
+		dis.setCodigo("ECOM003");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(1);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Cálculo 1");
+		dis.setCodigo("ECOM004");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(1);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Geometria Analitica");
+		dis.setCodigo("ECOM005");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(1);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Introdução à Eng da Computação");
+		dis.setCodigo("ECOM006");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(1);
+		disciplinas.add(dis);
+
+		//SEGUNDO PERIODO
+		dis = new Disciplinas();
+		dis.setNome("Lógica Aplicada à Computação");
+		dis.setCodigo("ECOM007");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(2);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Estrutura de Dados");
+		dis.setCodigo("ECOM008");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(2);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Física 1");
+		dis.setCodigo("ECOM009");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(2);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Cálculo 2");
+		dis.setCodigo("ECOM010");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(2);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Álgebra Linear");
+		dis.setCodigo("ECOM011");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(2);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Circuitos Digitais");
+		dis.setCodigo("ECOM012");
+		dis.setHoras("30 hs");
+		dis.getPeriodo().setAtual(2);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Desenho");
+		dis.setCodigo("ECOM013");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(2);
+		disciplinas.add(dis);
+
+		//TERCEIRO PERIODO
+		dis = new Disciplinas();
+		dis.setNome("Linguagens Formais, Autômatos e Computibilidade");
+		dis.setCodigo("ECOM014");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(3);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Projeto de Software");
+		dis.setCodigo("ECOM015");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(3);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Física 2");
+		dis.setCodigo("ECOM016");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(3);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Cálculo 3");
+		dis.setCodigo("ECOM017");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(3);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Metodologia da Pesquisa e do Trabalho Científico");
+		dis.setCodigo("ECOM018");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(3);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Sistemas Digitais");
+		dis.setCodigo("ECOM019");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(3);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Química Tecnológica");
+		dis.setCodigo("ECOM057");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(3);
+		disciplinas.add(dis);
+
+		//QUARTO PERIODO
+		dis = new Disciplinas();
+		dis.setNome("Probabilidade e Estatística");
+		dis.setCodigo("ECOM020");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(4);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Engenharia de Software");
+		dis.setCodigo("ECOM021");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(4);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Física 3");
+		dis.setCodigo("ECOM022");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(4);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Cálculo 4");
+		dis.setCodigo("ECOM023");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(4);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Variáveis Complexas");
+		dis.setCodigo("ECOM024");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(4);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Organização e Arquitetura de Computadores");
+		dis.setCodigo("ECOM025");
+		dis.setHoras("60 hs");
+		dis.getPeriodo().setAtual(4);
+		disciplinas.add(dis);
+
+		dis = new Disciplinas();
+		dis.setNome("Física Experimental");
+		dis.setCodigo("ECOM026");
+		dis.setHoras("30 hs");
+		dis.getPeriodo().setAtual(4);
+		disciplinas.add(dis);
+
+		return disciplinas;
 
 	}
 
@@ -308,7 +504,7 @@ public class CursoController implements Controller {
 		cur2.setNome("Engenharia da Computação");
 		cur2.setCodigo("231");
 		cur2.setId(2);
-		cur2.setDisciplinas(gerarDisciplinasCC()); //DEPOIS MUDAR PARA EC;
+		cur2.setDisciplinas(gerarDisciplinasEC()); //DEPOIS MUDAR PARA EC;
 
 		cursos.add(cur1);
 		cursos.add(cur2);
