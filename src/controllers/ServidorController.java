@@ -1,5 +1,6 @@
 package controllers;
 
+import classes.Docente;
 import java.util.ArrayList;
 
 import classes.Servidor;
@@ -52,5 +53,15 @@ public class ServidorController implements Controller{
 		System.out.println(d.toString());
             }
             System.out.println("\n");
+    }
+
+    public void relatorioProfDisc() {
+        System.out.println("Professor - Disciplinas");
+        for(Servidor s: servidores){
+            if(s instanceof Servidor){
+                System.out.print(s.getNome()+":\t");
+                /*Falta imprimir as disciplinas*/
+            }
+        }
     }
 }
