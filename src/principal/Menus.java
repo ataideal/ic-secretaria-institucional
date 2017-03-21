@@ -1,21 +1,25 @@
 package principal;
 
+import classes.ClasseDocente;
 import java.util.Scanner;
 
 import classes.Curso;
 import classes.Discente;
 import classes.Disciplinas;
 import classes.Periodo;
+import classes.Servidor;
 import controllers.CursoController;
 import controllers.DiscenteController;
 import controllers.GenericController;
 import controllers.PeriodoController;
+import controllers.ServidorController;
 
 public class Menus {
 	private Scanner scan;
 	public DiscenteController discenteController;
 	public CursoController cursoController;
 	public PeriodoController periodoController;
+        public ServidorController servidorController;
 
 	public Menus(){
 		discenteController = new DiscenteController();
@@ -183,6 +187,60 @@ public class Menus {
 		if((a<1 && a>5) && a!=9)
 			return 0;
 		return a;
+	}
+        
+        public void cadastrarServidor(){
+		try{
+			scan = new Scanner(System.in);
+			System.out.println("\tCadastro de servidor");
+			System.out.println("Digite o nome:");
+			String nome = scan.nextLine();
+			System.out.println("Digite a siap:");
+			String siape = scan.nextLine();
+			System.out.println("Digite o cargo:");
+			String cargo = scan.nextLine();
+			System.out.println("Digite o cpf:");
+			String cpf = scan.nextLine();
+			System.out.println("Selecione a classe:");
+			ClasseDocente classe = new ClasseDocente();
+
+			Servidor servidor = new Servidor();
+			servidor.setNome(nome);
+			servidor.setSiape(siape);
+			servidor.setCargo(cargo);
+			servidor.setCPF(cpf);
+			servidor.setClasse(classe);
+
+			servidorController.cadastrar(servidor);
+
+		}catch(Exception e){
+			System.out.println("Operaçao inválida!");
+		}
+	}
+
+	public void removerServidor(){
+		System.out.println("\tRemover servidor");
+		System.out.println("Selecione um servidor:");
+		Servidor d = GenericController.selecionar(servidorController.servidores);
+		if(d!=null)
+			servidorController.remover(d);
+	}
+
+	public void atualizarServidor(){
+		System.out.println("\tAtualizar servidor");
+		System.out.println("Selecione um servidor:");
+		Servidor d = GenericController.selecionar(servidorController.servidores);
+		if(d!=null){
+			try{
+
+			}catch (Exception e) {
+			}
+		}
+
+	}
+
+	public void listarServidor(){
+		servidorController.listar();
 	}
 	/*--------------------------------------------------------*/
 
