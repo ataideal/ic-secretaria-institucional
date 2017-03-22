@@ -26,11 +26,11 @@ public class Periodo {
         return nome;
     }
 
-	public int getAtual() {
-		return atual;
-	}
+    public int getAtual() {
+            return atual;
+    }
 
-	public void setAtual(int atual) {
-		this.atual = atual;
-	}
+    public void setAtual(int atual) {
+            this.atual = atual;
+    }
 }

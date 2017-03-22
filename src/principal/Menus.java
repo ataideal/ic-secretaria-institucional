@@ -248,6 +248,10 @@ public class Menus {
     public void relatorioProfDisc(){
         servidorController.relatorioProfDisc();
     }
+    
+    public void relatorioProfPerio(){
+        servidorController.relatorioProfPerio();
+    }
     /*--------------------------------------------------------*/
 
     /*--------------------------Curso-------------------------*/
