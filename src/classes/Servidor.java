@@ -6,11 +6,10 @@ public class Servidor {
 	private String siape;
 	private String cargo;
 	private String CPF;
-	private ClasseDocente classe;
         
         public Servidor(int id){
-        	this.id = id;
-            this.classe = new ClasseDocente();
+            this.id = id;
+            
         }
         
         public int getId() {
@@ -47,14 +46,6 @@ public class Servidor {
 
         public void setCPF(String CPF) {
             this.CPF = CPF;
-        }
-
-        public ClasseDocente getClasse() {
-            return classe;
-        }
-
-        public void setClasse(ClasseDocente classe) {
-            this.classe = classe;
         }
         
         @Override

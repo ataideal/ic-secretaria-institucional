@@ -211,7 +211,7 @@ public class Menus {
             servidor.setSiape(siape);
             servidor.setCargo(cargo);
             servidor.setCPF(cpf);
-            servidor.setClasse(classe);
+            
 
             servidorController.cadastrar(servidor);
 

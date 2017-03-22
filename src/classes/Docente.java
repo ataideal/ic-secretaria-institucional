@@ -5,8 +5,9 @@ import java.util.ArrayList;
 
 public class Docente extends Servidor{
     
-    private ArrayList<Disciplinas> disciplinasMinistradas;
+    public ArrayList<Disciplinas> disciplinasMinistradas;
     private SituacaoDocente situacao;
+    private ClasseDocente classe;
 
     public Docente(int id){
     	super(id);
