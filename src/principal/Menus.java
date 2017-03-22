@@ -259,11 +259,12 @@ public class Menus {
         System.out.println("3-Remover");
         System.out.println("4-Listar");
         System.out.println("5-Mostrar matriz de disciplina");
+        System.out.println("6-Relatorio de alunos por curso");
         System.out.println("9-Sair\n");
 
         scan = new Scanner(System.in);
         int a = scan.nextInt();
-        if((a<1 && a>6) && a!=9)
+        if((a<1 && a>7) && a!=9)
                 return 0;
         return a;
     }
@@ -317,6 +318,11 @@ public class Menus {
     public void mostrarDisciplinas(){
         cursoController.mostrarDisciplinas();
     }
+    
+    public void relatorioAlunos(){
+        cursoController.relatorioAlunos();
+    }
+    
     /*--------------------------------------------------------*/
 
     /*-------------------------Periodo------------------------*/

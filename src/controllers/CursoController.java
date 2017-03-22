@@ -525,4 +525,13 @@ public class CursoController implements Controller {
 		}
 		return newarray;
 	}
+        
+        public void relatorioAlunos(){
+            
+            for(int i=0;i<cursos.size();i++){
+                System.out.println("Curso : " + cursos.get(i).getNome());
+                System.out.println("Número de alunos : " + cursos.get(i).getAlunos());
+            }
+            
+        }
 }

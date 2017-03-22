@@ -51,7 +51,9 @@ public class Principal {
 					menus.listarCursos();
 				} else if (c2==5){
 					menus.mostrarDisciplinas();
-				}
+				} else if (c2==6){
+                                        menus.relatorioAlunos();
+                                }
 			}
 			else if(c1==4){
 				int c2 = menus.menuPeriodo();
