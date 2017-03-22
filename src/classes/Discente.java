@@ -20,7 +20,7 @@ public class Discente {
 
 	public Discente(int id){
 		this.id = id;
-		this.curso = new Curso();
+		this.curso = new Curso(-1);
 		this.periodoIngresso = new Periodo();
 		this.disciplinas = new ArrayList<>();
 	}

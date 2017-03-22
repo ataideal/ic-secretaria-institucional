@@ -1,23 +1,20 @@
 package classes;
 public class Servidor {
 
-	private int id;
+	private final int id;
 	private String nome;
 	private String siape;
 	private String cargo;
 	private String CPF;
 	private ClasseDocente classe;
         
-        public Servidor(){
+        public Servidor(int id){
+        	this.id = id;
             this.classe = new ClasseDocente();
         }
         
         public int getId() {
             return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
         }
 
         public String getNome() {

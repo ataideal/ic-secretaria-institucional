@@ -25,6 +25,7 @@ public class Menus {
         discenteController = new DiscenteController();
         cursoController = new CursoController();
         periodoController = new PeriodoController();
+        servidorController = new ServidorController();
     }
     public int menuPrincipal(){
 
@@ -205,7 +206,7 @@ public class Menus {
             System.out.println("Selecione a classe:");
             ClasseDocente classe = new ClasseDocente();
 
-            Servidor servidor = new Servidor();
+            Servidor servidor = new Servidor(servidorController.getIdCount());
             servidor.setNome(nome);
             servidor.setSiape(siape);
             servidor.setCargo(cargo);
@@ -275,14 +276,11 @@ public class Menus {
                 String nome = scan.nextLine();
                 System.out.println("Digite o codigo:");
                 String codigo = scan.nextLine();
-                System.out.println("Digite o id:");
-                int id = scan.nextInt();
 
-                Curso curso = new Curso();
+                Curso curso = new Curso(cursoController.getIdIncrementorr());
 
                 curso.setCodigo(codigo);
                 curso.setNome(nome);
-                curso.setId(id);
 
                 cursoController.cadastrar(curso);
         }catch (Exception e) {

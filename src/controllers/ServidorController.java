@@ -64,4 +64,8 @@ public class ServidorController implements Controller{
             }
         }
     }
+    
+    public int getIdCount(){
+    	return idCount;
+    }
 }

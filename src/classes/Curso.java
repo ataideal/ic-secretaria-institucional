@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Curso {
 
-	private Integer id;
+	private final Integer id;
 
 	private String codigo;
 
@@ -14,9 +14,10 @@ public class Curso {
 
 	public ArrayList<Disciplinas> disciplinas;
 
-	public Curso() {
+	public Curso(int id) {
 		disciplinas = new ArrayList();
-                this.alunos = 0;
+        this.alunos = 0;
+        this.id = id;
 	}
         
         public int getAlunos() {
@@ -29,10 +30,6 @@ public class Curso {
 
 	public Integer getId() {
 		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public String getCodigo() {

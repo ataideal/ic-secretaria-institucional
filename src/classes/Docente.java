@@ -8,6 +8,11 @@ public class Docente extends Servidor{
     private ArrayList<Disciplinas> disciplinasMinistradas;
     private SituacaoDocente situacao;
 
+    public Docente(int id){
+    	super(id);
+    	disciplinasMinistradas = new ArrayList<>();
+    }
+    
     public ArrayList<Disciplinas> getDisciplinasMinistradas() {
         return disciplinasMinistradas;
     }

@@ -10,10 +10,11 @@ public class CursoController implements Controller {
 
 	public ArrayList<Curso> cursos;
 	public Scanner scan;
-
+	private int idIncrementor;
 	public CursoController(){
 		cursos = new ArrayList<>();
 		gerarExemplos();
+		idIncrementor=0;
 	}
 
 	@Override
@@ -21,6 +22,7 @@ public class CursoController implements Controller {
 		try{
 			cursos.add((Curso)curso);
 			System.out.println("Curso cadastrado!");
+			idIncrementor++;
 			return true;
 		}catch (Exception e) {
 			System.out.println("Erro ao cadastrar curso!");
@@ -54,7 +56,10 @@ public class CursoController implements Controller {
 
 		return false;
 	}
-
+	
+	 public int getIdIncrementorr(){
+	    	return idIncrementor;
+	    }
 	public void mostrarDisciplinas(){
 
 		scan = new Scanner(System.in);
@@ -494,16 +499,14 @@ public class CursoController implements Controller {
 	}
 
 	public void gerarExemplos(){
-		Curso cur1 = new Curso();
+		Curso cur1 = new Curso(idIncrementor++);
 		cur1.setNome("Ciência da Computação");
 		cur1.setCodigo("230");
-		cur1.setId(1);
 		cur1.setDisciplinas(gerarDisciplinasCC());
 
-		Curso cur2 = new Curso();
+		Curso cur2 = new Curso(idIncrementor++);
 		cur2.setNome("Engenharia da Computação");
 		cur2.setCodigo("231");
-		cur2.setId(2);
 		cur2.setDisciplinas(gerarDisciplinasEC()); //DEPOIS MUDAR PARA EC;
 
 		cursos.add(cur1);
